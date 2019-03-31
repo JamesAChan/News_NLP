@@ -5,15 +5,16 @@ import "time"
 // the supported public data sources
 // NOTE: the names should all be uppercase
 const (
+	// add new data source here:)
 	GoogleNews	= "GOOGLENEWS"
 	FinTime     = "FINTIMES"
-	//DB info
+	// DB info
 	Address		= "http://localhost"
 	Port		= "8086"
 	DBName		= "PUBLIC"
 )
 
-// Pub is the interface for all pubs
+// Public is the interface for all pubs
 // Any pub struct should implement all these interfaces
 type Public interface {
 	Name() string

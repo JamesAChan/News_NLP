@@ -1,10 +1,8 @@
 package structure
 
 import (
-	"time"
 	"strings"
 	"public-data/logger"
-	"fmt"
 	. "public-data/integrated/googlenews"
 	. "public-data/integrated/fintimes"
 	"github.com/joho/godotenv"
@@ -18,13 +16,6 @@ type Pub struct {
 func (p Pub) Name() string {
 	return p.name
 }
-
-// interface function of base class
-func (p Pub) GetMyTrades(pair Pair, start, end time.Time) TradeLogS {
-	fmt.Println(p.name + ".GetMyTrades(pair Pair, start, end time.Time)" + " not implemented")
-	return TradeLogS{}
-}
-
 
 // NewPub return an Public interface given an Public name
 func NewPub(name string) Public {

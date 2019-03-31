@@ -20,10 +20,7 @@ test:
 
 .PHONY: public
 public:
-	$(GOBUILD) -o ./bin/rpc_server -v ./rpc/server/main.go
-	$(GOBUILD) -o ./bin/mds_record -v ./db/mds/record/main.go
-	$(GOBUILD) -o ./bin/mds_recordFut -v ./db/mds/recordFut/main.go
-	$(GOBUILD) -o ./bin/mds_recordOpt -v ./db/mds/recordOpt/main.go
+	$(GOBUILD) -o ./bin/google -v ./integrated/googlenews/example/main.go
 
 .PHONY: clean
 clean:

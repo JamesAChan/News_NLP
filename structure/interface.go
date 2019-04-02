@@ -7,7 +7,7 @@ import "time"
 const (
 	// add new data source here:)
 	GoogleNews	= "GOOGLENEWS"
-	FinTime     = "FINTIMES"
+	FT     = "FINTIMES"
 	// DB info
 	Address		= "http://localhost"
 	Port		= "8086"
@@ -32,6 +32,7 @@ type Datapoint struct {
 	Description		string
 	Body     		string
 	Category 		string
+	Country      	string
 	Source   		string
 	URL  			string
 }

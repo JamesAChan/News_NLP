@@ -49,6 +49,7 @@ func (p Google) GetData() Datapoints {
 		datapt.Description = v.Description
 		datapt.Body = v.Content
 		datapt.Category = v.Category
+		datapt.Country = v.Country
 		datapt.Source = v.Sources.Name
 		datapt.URL = v.URL
 		datapts = append(datapts, datapt)
@@ -91,6 +92,7 @@ func (p Google) SaveDB(dbinfo DBinfo, da Datapoints) {
 		tags := map[string]string{
 			"Source": v.Source,
 			"Category": v.Category,
+			"Country": v.Country,
 		}
 		pt, err := client.NewPoint(p.Name(), tags, fields, v.Time)
 		if err != nil {

@@ -28,6 +28,7 @@ type MyArticle struct {
 	Time 		string
 	Content   	string
 	Category    string
+	Country     string
 }
 
 

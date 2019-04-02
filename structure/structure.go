@@ -26,7 +26,7 @@ func NewPub(name string) Public {
 	switch strings.ToUpper(name) {
 	case GoogleNews:
 		return NewGoogle()
-	case FinTime:
+	case FT:
 		return NewFinTimes()
 	default:
 		logger.Panic().Str("pchagne name", name).Msg("invalid Pub")

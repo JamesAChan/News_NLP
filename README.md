@@ -5,13 +5,13 @@
 ### Features
 This repo is created for IMF project and aiming to realize the following features:
 * Data acquisition: include historical data and real-time data
-* Data storage: store different data type into different databases (support InfluxDB so far)
-* Real-time monitor and alert: add slack and email notification channel to monitor server status and different processes
+* Data storage: store different data types into different databases (support InfluxDB so far)
+* Real-time monitor and alert: add slack and email notification channels to monitor server status and different processes
 ------------------
 ### Advantages
 * Extendability: can add other data sources easily
-* Speed: we can take the advantage of Golang and achieve fast data query/storage/processing
-* Flexibility: can add new features into `interface.go` by adding another functions:
+* Speed: take the advantage of Golang and achieve fast data query/storage/processing
+* Flexibility: can add new features into `structure/interface.go` by adding another functions:
 ```go
 // Public is the interface for all pubs
 // Any pub struct should implement all these interfaces
@@ -61,8 +61,8 @@ func NewPub(name string) Public {
 * Next, implement all methods in `interface.go` for new data source
 1. first implement basic functions in `implement` folder
 2. secondly, integrate the basic functions with predefined methods
-3. lastly, write a `main.go` function for execution
-4. add new execution file (new `main.go` file) into `Makefile` to generate `binary file`, which will located in `bin` folder
+3. thirdly, write a `main.go` file for execution
+4. lastly, add the execution file (the above `main.go` file) into `Makefile` to generate `binary file`, which will be located in `bin` folder
 
 ### Future features
 * welcome to make any comments and give your precious suggestion for improvements
